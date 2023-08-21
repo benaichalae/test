@@ -12,6 +12,7 @@
 #include <fcntl.h>
 
 #define DELIM " \t\n"
+#define MAX_INPUT_SIZE 1024
 extern char **environ;
 /* main */
 char *read_line(void);
@@ -23,6 +24,9 @@ int _strlen(char *s);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_strdup(const char *str);
-/* tools */
+
+int _strlen(char *s);
+char *__memcpy(char *dest, char *src, unsigned int n);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void free_array(char **arr);
 #endif

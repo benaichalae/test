@@ -8,7 +8,7 @@
 */
 
 int main(int ac, char **argv)
-/**{
+{
     char *line = NULL, **cmd = NULL;
     int status = 0;
     (void) ac;
@@ -28,8 +28,8 @@ int main(int ac, char **argv)
         else
             status = _execute(cmd, argv);
     }
-}*/
-{
+}
+/*{
     char **cmd;
     int status = 0, i;
     (void) ac;
@@ -38,7 +38,7 @@ int main(int ac, char **argv)
         char *input = read_line();
 
         if (input == NULL)
-            break;
+            continue;
 
         cmd = tokenizer(input);
 
@@ -54,4 +54,4 @@ int main(int ac, char **argv)
     }
 
     return status;
-}
+}*/

@@ -44,7 +44,7 @@ char **tokenizer(char *line)
 {
     char **tokens = NULL;
     char *token = NULL;
-    int token_count = 0;
+    int token_count = 0, i;
     int token_size = 1;
     
     tokens = (char **)malloc(sizeof(char *) * token_size);
@@ -57,7 +57,7 @@ char **tokenizer(char *line)
         tokens[token_count] = _strdup(token);
         if (tokens[token_count] == NULL)
         {
-            for (int i = 0; i < token_count; i++)
+            for (i = 0; i < token_count; i++)
             {
                 free(tokens[i]);
             }

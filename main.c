@@ -31,8 +31,9 @@ int main(int ac, char **argv)
 }*/
 {
     char **cmd;
-    int status = 0;
-
+    int status = 0, i;
+    (void) ac;
+    
     while (1) {
         char *input = read_line();
 
@@ -43,7 +44,7 @@ int main(int ac, char **argv)
 
         if (cmd != NULL) {
             status = _execute(cmd, argv);
-            for (int i = 0; cmd[i] != NULL; i++) {
+            for (i = 0; cmd[i] != NULL; i++) {
                 free(cmd[i]);
             }
             free(cmd);

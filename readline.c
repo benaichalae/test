@@ -19,7 +19,7 @@ char *read_line(void)
 {
     char *line = NULL;
     size_t bufsize = 0;
-    ssize_t n;
+    ssize_t n, input_length;
 
     if (isatty(STDIN_FILENO)) {
         write(STDOUT_FILENO, "$ ", 2);
@@ -33,7 +33,7 @@ char *read_line(void)
         return NULL;
     }
 
-    size_t input_length = strlen(line);
+    input_length = _strlen(line);
     if (input_length > 0 && line[input_length - 1] == '\n')
         line[input_length - 1] = '\0';
 

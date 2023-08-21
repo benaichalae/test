@@ -33,5 +33,9 @@ char *read_line(void)
         return NULL;
     }
 
+    size_t input_length = strlen(line);
+    if (input_length > 0 && line[input_length - 1] == '\n')
+        line[input_length - 1] = '\0';
+
     return line;
 }
